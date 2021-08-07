@@ -62,7 +62,7 @@ body{
     
     .page-todo .task {
         border-bottom: 1px solid #e4e5e6;
-        margin-bottom: 1px;
+        margin-bottom: 10px;
         position: relative
     }
     
@@ -141,7 +141,8 @@ body{
         border: none;
         -webkit-box-sizing: content-box;
         -moz-box-sizing: content-box;
-        box-sizing: content-box
+        box-sizing: content-box;
+       
     }
     
     .page-todo .timeslot .task span {
