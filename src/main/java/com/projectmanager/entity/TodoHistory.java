@@ -1,6 +1,8 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -26,13 +28,19 @@ public class TodoHistory implements Serializable {
     @Column(name = "pre_status", nullable = false)
     private String preStatus;
 
-    @Column(name = "update_date")
+    @Column(name = "update_date", nullable = false)
     private String updateDate;
 
-    @Column(name = "update_user")
-    private Integer updateUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "update_user",referencedColumnName = "id")
+    @Nullable
+    private User updateUser;
 
-    @Column(name = "todo_id", nullable = false)
-    private Integer todoId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "todo_id",referencedColumnName = "id")
+    @Nullable
+    private Todo todo;
 
 }

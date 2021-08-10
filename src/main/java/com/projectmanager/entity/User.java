@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -48,4 +49,18 @@ public class User implements Serializable {
     @Column(name = "create_user", nullable = false)
     private Integer createUser;
 
+    @OneToMany(mappedBy = "createUser", fetch = FetchType.LAZY)
+    private List<Project> projectCreatedList;
+
+//    @OneToMany(mappedBy = "createUser", fetch = FetchType.LAZY)
+//    private List<Task> taskCreatedList;
+
+    @OneToMany(mappedBy = "taskManager", fetch = FetchType.LAZY)
+    private List<Task> taskManagementList;
+
+    @OneToMany(mappedBy = "assignedUser", fetch = FetchType.LAZY)
+    private List<Todo> todoList;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<ProjectEmployee> projectList;
 }

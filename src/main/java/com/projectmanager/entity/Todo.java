@@ -1,11 +1,14 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "todo")
@@ -40,8 +43,11 @@ public class Todo implements Serializable {
     @Column(name = "status")
     private String status;
 
-    @Column(name = "task_id", nullable = false)
-    private Integer taskId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "task_id",referencedColumnName = "id")
+    @Nullable
+    private Task task;
 
     @Column(name = "create_date", nullable = false)
     private Timestamp createDate;
@@ -49,10 +55,18 @@ public class Todo implements Serializable {
     @Column(name = "update_date")
     private Timestamp updateDate;
 
-    @Column(name = "create_user", nullable = false)
-    private Integer createUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "create_user",referencedColumnName = "id")
+    @Nullable
+    private User createUser;
 
-    @Column(name = "assigned_user")
-    private Integer assignedUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "assigned_user",referencedColumnName = "id")
+    private User assignedUser;
+
+    @OneToMany(mappedBy = "todo", fetch = FetchType.LAZY)
+    private List<TodoHistory> todoHistoryList;
 
 }

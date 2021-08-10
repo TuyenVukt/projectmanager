@@ -1,11 +1,14 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Data
@@ -43,10 +46,20 @@ public class Project implements Serializable {
     @Column(name = "update_date")
     private Timestamp updateDate;
 
-    @Column(name = "create_user", nullable = false)
-    private Integer createUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "create_user",referencedColumnName = "id")
+    @Nullable
+    private User createUser;
 
-    @Column(name = "update_user")
-    private Integer updateUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "update_user",referencedColumnName = "id")
+    private User updateUser;
 
+    @OneToMany(mappedBy = "project_employee", fetch = FetchType.LAZY)
+    private List<ProjectEmployee> projectEmployeeList;
+
+    @OneToMany(mappedBy = "project_task", fetch = FetchType.LAZY)
+    private List<Task> taskList;
 }

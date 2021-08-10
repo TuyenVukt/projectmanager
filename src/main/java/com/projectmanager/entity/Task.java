@@ -1,11 +1,14 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "task")
@@ -37,8 +40,11 @@ public class Task implements Serializable {
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "project_id", nullable = false)
-    private Integer projectId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "project_id",referencedColumnName = "id")
+    @Nullable
+    private Project project_task;
 
     @Column(name = "create_date", nullable = false)
     private Timestamp createDate;
@@ -46,10 +52,23 @@ public class Task implements Serializable {
     @Column(name = "update_date")
     private Timestamp updateDate;
 
-    @Column(name = "create_user", nullable = false)
-    private Integer createUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "create_user",referencedColumnName = "id")
+    @Nullable
+    private User createUser;
 
-    @Column(name = "task_manager_id")
-    private Integer taskManagerId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "task_manager_id",referencedColumnName = "id")
+    private User taskManager;
 
+    @Column(name = "is_deleted", nullable = false)
+    private Boolean deleted;
+
+    @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
+    private List<Todo> todoList;
+
+    @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
+    private List<TaskHistory> taskHistoryList;
 }

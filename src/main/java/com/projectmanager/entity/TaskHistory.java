@@ -1,6 +1,8 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -30,10 +32,16 @@ public class TaskHistory implements Serializable {
     @Column(name = "update_date", nullable = false)
     private Timestamp updateDate;
 
-    @Column(name = "update_user", nullable = false)
-    private Integer updateUser;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "update_user",referencedColumnName = "id")
+    @Nullable
+    private User updateUser;
 
-    @Column(name = "task_id", nullable = false)
-    private Integer taskId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "task_id",referencedColumnName = "id")
+    @Nullable
+    private Task task;
 
 }

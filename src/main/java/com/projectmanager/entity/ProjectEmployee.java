@@ -1,6 +1,8 @@
 package com.projectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,11 +19,17 @@ public class ProjectEmployee implements Serializable {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "project_id", nullable = false)
-    private Integer projectId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "project_id",referencedColumnName = "id")
+    @Nullable
+    private Project project_employee;
 
-    @Column(name = "user_id", nullable = false)
-    private Integer userId;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    @Nullable
+    private User user;
 
     @Column(name = "role", nullable = false)
     private String role;
