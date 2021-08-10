@@ -19,9 +19,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="style.css">
   <!-- <link rel="stylesheet" href="/project-details.css"> -->
-  <link rel="stylesheet" href="test-task-list.css">
+  <link rel="stylesheet" href="task-list.css">
   <link rel="stylesheet" href="project-manager.css">
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
@@ -30,79 +30,63 @@
 <html>
 
 <body>
-  <!--Navbar  -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Project Manager</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- main menu -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Project Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
-            data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false">User Manager </a>
-          <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="nav-link-text">Add</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="nav-link-text">Manager</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
-            data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false">Project Manager</a>
-          <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="nav-link-text">Add</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="nav-link-text">Manager</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">My Project</a>
-        </li>
-      </ul>
-      <form class="form-inline ml-auto mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <button type="button" class="btn btn-primary">My Account</button>
-      <button type="button" class="btn btn-primary">Login</button>
-      <button type="button" class="btn btn-primary">Logout</button>
+        <div class="collapse navbar-collapse " id="navbarCollapse">
+            <ul class="navbar-nav mr-auto sidenav sidebarnav" id="navAccordion">
 
-    </div>
-  </nav>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link " href="user-manager.html">User
+                        Manager </a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link " href="project-manager.html">Project
+                        Manager</a>
+                </li>
+                <!-- user?? -->
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="project-manager.html">My Project</a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="project-details.html">My Task</a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="to-do-details.html">My Todo</a>
+                </li>
+                <!--  -->
+            </ul>
+            <div class="group-btn">
+                
+                <a href="myacount.html" class="btn btn-primary">Account</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+
+                <button type="button" class="btn btn-primary">Logout</button>
+            </div>
+
+
+        </div>
+    </nav>
+    <!-- end main menu -->
 
   <main class="content-wrapper">
     <div class="container p-30">
+      <h3>Add Users To This Project</h3>
       <div class="row">
         <div class="col-md-12 main-datatable">
           <div class="card_body">
-            <div class="task-list">User List</div>
+            <!-- <div class="task-list">User List</div> -->
             <div class="row d-flex">
               <div class="col-sm-4 createSegment">
-                <a class="btn dim_button create_new"  data-toggle="modal" data-target="#new-user"> <span class="glyphicon glyphicon-plus"></span>New User</a>
-              </div>
+                <!-- <a class="btn dim_button create_new"  data-toggle="modal" data-target="#new-user"> <span class="glyphicon glyphicon-plus"></span>New User</a> -->
+                <!-- <h3>Add Users To This Project</h3> -->
+                <button class="btn btn-success">Select All</button>
+            </div>
               <div class="col-sm-8 add_flex">
                 <div class="form-group searchInput">
                   <label for="email">Search:</label>
@@ -115,33 +99,115 @@
               <table style="width:100%; " id="filtertable" class="table cust-datatable dataTable no-footer">
                 <thead>
                   <tr>
-                    <th style="min-width:20px; max-width: 50;">ID</th>
+                    <th style="min-width:20px; max-width: 50;">Add</th>
                     <th style="min-width:150px;">Name</th>
                     <th style="min-width:150px;">Email</th>
                     <th style="min-width:100px;">Phone</th>
-                    <th style="min-width:100px;">Create date</th>
+                    <th style="min-width:100px;">Role</th>
                     <th style="min-width:150px;">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>Vũ Đức Tuyên</td>
+                    <td>
+                      <div class="form-check" >
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                       
+                      </div>
+                    </td>
+                    <td>Đặng Đình Long</td>
                     <td>vutuyenkt2000@gmail.com</td>
-                    <td>0987676575</td>
-                    <td>17-Apr-2020</td>
+                    <td>0987878786</td>
+                    <td>    
+                      <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Employee</option>
+                      <option>Leader</option>
+                    </select></td>
                     <td>
                         <button type="button" class="btn btn-primary "  data-toggle="modal" data-target="#new-user">
                           Details
                         </button>
+                        
                       </a>
                     </td>
                   </tr>
-
+                  <tr>
+                    <td>
+                      <div class="form-check" >
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                       
+                      </div>
+                    </td>
+                    <td>Vũ Đức Tuyên</td>
+                    <td>vutuyenkt2000@gmail.com</td>
+                    <td>0987878786</td>
+                    <td>    
+                      <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Employee</option>
+                      <option>Leader</option>
+                    </select></td>
+                    <td>
+                        <button type="button" class="btn btn-primary "  data-toggle="modal" data-target="#new-user">
+                          Details
+                        </button>
+                        
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check" >
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                       
+                      </div>
+                    </td>
+                    <td>Lương Văn Minh</td>
+                    <td>vutuyenkt2000@gmail.com</td>
+                    <td>0987878786</td>
+                    <td>    
+                      <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Employee</option>
+                      <option>Leader</option>
+                    </select></td>
+                    <td>
+                        <button type="button" class="btn btn-primary "  data-toggle="modal" data-target="#new-user">
+                          Details
+                        </button>
+                        
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check" >
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                       
+                      </div>
+                    </td>
+                    <td>Nguyễn Xuân Thành</td>
+                    <td>vutuyenkt2000@gmail.com</td>
+                    <td>0987878786</td>
+                    <td>    
+                      <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Employee</option>
+                      <option>Leader</option>
+                    </select></td>
+                    <td>
+                        <button type="button" class="btn btn-primary "  data-toggle="modal" data-target="#new-user">
+                          Details
+                        </button>
+                        
+                      </a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
           </div>
+        </div>
+        <div class="row p-30">
+          <button class="btn btn-primary" style="margin-left: auto">Submit</button>
+          <a href="project-details.html" class="btn btn-danger">Back</a>
         </div>
       </div>
     </div>

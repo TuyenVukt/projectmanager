@@ -69,6 +69,13 @@ padding-left: 20px;
   color: #131414!important;
 }
 
+.form-check{
+  position: relative;
+}
+.form-check input{
+  position:absolute;top: 50% ; transform: translateY(-50%)
+}
+
 
 @media (min-width: 992px) {
 .sidenav {
