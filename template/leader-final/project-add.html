@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-manager.css">
+    <!-- <link rel="stylesheet" href="/project-details.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+</head>
+<html>
+
+<body>
+      <!-- main menu -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Project Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarCollapse">
+            <ul class="navbar-nav mr-auto sidenav sidebarnav" id="navAccordion">
+
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link " href="user-manager.html">User
+                        Manager </a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link " href="project-manager.html">Project
+                        Manager</a>
+                </li>
+                <!-- user?? -->
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="project-manager.html">My Project</a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="project-details.html">My Task</a>
+                </li>
+                <li class="nav-item sidebar-item">
+                    <a class="nav-link" href="to-do-details.html">My Todo</a>
+                </li>
+                <!--  -->
+            </ul>
+            <div class="group-btn">
+                
+                <a href="myacount.html" class="btn btn-primary">Account</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+
+                <button type="button" class="btn btn-primary">Logout</button>
+            </div>
+
+
+        </div>
+    </nav>
+    <!-- end main menu -->
+
+    <main class="content-wrapper">
+
+        <div class="section-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <ul class="nav nav-tabs page-header-tab">
+                                <li class="nav-item"><a class="nav-link" href="project-manager.html">Project List</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="project-add.html">Add</a></li>
+                            </ul>
+                            <div class="header-action d-md-flex">
+                                <div class="input-group mr-2">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+
+        <div class="tab-pane" id="Project-add" role="tabpanel">
+            <div class="container-fluid">
+                <h1 style="margin-top: 50px;">Create Project</h1>
+                <div class="form-wrapper">
+                    <form>
+                        <div class="form-group row">
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-3 col-form-label">Todo Name<span
+                                    class="text-danger">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="Text" class="form-control" id="inputName" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Due <span class="text-danger">*</span></label>
+                            <div class="col-md-7" style="display: flex;">
+                                <input type="text" class="form-control datepicker" name="date" value="" >
+                                
+                                <span style="padding: 10px;">To</span>
+                                <input type="text" class="form-control datepicker" name="date" value="" >
+                               
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleFormControlSelect1" class="col-sm-3 col-form-label">Priority<span
+                                    class="text-danger">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>High</option>
+                                    <option>Normal</option>
+                                    <option>Low</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Description <span class="text-danger">*</span></label>
+                            <div class="col-md-7">
+                                <textarea rows="4" class="form-control no-resize" placeholder="Descriptions"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">
+                                Assign for<span class="text-danger">*</span></label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="selectpicker" data-live-search="true" title="Select User">
+                                    
+                                    <option data-tokens="ketchup mustard">User1</option>
+                                    <option data-tokens="mustard">User2</option>
+                                    <option data-tokens="frosting">User3</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">
+                                Status<span class="text-danger">*</span></label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="selectpicker"  title="Select Status">
+                                    <option data-tokens="ketchup mustard">Working</option>
+                                    <option data-tokens="mustard">On-Reviewing</option>
+                                    <option data-tokens="frosting">Done</option>
+                                  </select>
+                            </div>
+                        </div>
+        
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label"></label>
+                            <div class="col-md-7">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                            </div>
+                        </div>
+                          
+        
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- MAIN -->
+
+
+
+        <!-- Main Col END -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <span>Coded by <a href="https://si-dev.com/ru">SI-Dev</a>, 2018</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+
+
+
+</body>
+
+</html>
