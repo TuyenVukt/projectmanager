@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.14/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/test.css">
+    <link rel="stylesheet" href="test-task-list.css">
+
+</head>
+<html>
+
+<body>
+    <!--Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Project Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
+                        data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false">User
+                        Manager </a>
+                    <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Manager</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
+                        data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false">Project
+                        Manager</a>
+                    <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Manager</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Project</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button type="button" class="btn btn-primary">My Account</button>
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary">Logout</button>
+
+        </div>
+    </nav>
+    <!-- end Navbar -->
+    <!-- Main -->
+    <main class="content-wrapper">
+        CODE MAIN HERE
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </main>
+    <!-- ENd Main -->
+    <!-- Footter -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <span>Coded by <a href="https://si-dev.com/ru">SI-Dev</a>, 2018</span>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footter -->
+    <script>
+        $(document).ready(function () {
+            var dataTable = $('#filtertable').DataTable({
+                "pageLength": 5,
+                'aoColumnDefs': [{
+                    'bSortable': false,
+                    'aTargets': ['nosort'],
+                }],
+                columnDefs: [
+                    { type: 'date-dd-mm-yyyy', aTargets: [5] }
+                ],
+                "aoColumns": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "order": false,
+                "bLengthChange": false,
+                "dom": '<"top">ct<"top"p><"clear">'
+            });
+            $("#filterbox").keyup(function () {
+                dataTable.search(this.value).draw();
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
