@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/test.css">
+    <link rel="stylesheet" href="/project-manager.css">
+    <!-- <link rel="stylesheet" href="/project-details.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+</head>
+<html>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Project Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
+                        data-target="#collapseSubItems2" aria-controls="collapseSubItems2" aria-expanded="false">User
+                        Manager </a>
+                    <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Manager</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-collapse" href="#" id="hasSubItems" data-toggle="collapse"
+                        data-target="#collapseSubItems4" aria-controls="collapseSubItems4" aria-expanded="false">Project
+                        Manager</a>
+                    <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="nav-link-text">Manager</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Project</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button type="button" class="btn btn-primary">My Account</button>
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary">Logout</button>
+
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+
+        <div class="section-body">
+            <div class="container-fluid">
+                <h3>Project detail</h3>
+                <div class="btn-group" style="margin-top: 30px;">
+                    <button type="button" class="btn btn-primary">Add user</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6 py-1"><strong>Created:</strong></div>
+                        <div class="col-6 py-1">09 Jun 2019 11:32AM</div>
+                        <div class="col-6 py-1"><strong>Creator:</strong></div>
+                        <div class="col-6 py-1">Nathan Guerrero</div>
+                        <div class="col-6 py-1"><strong>Task:</strong></div>
+                        <div class="col-6 py-1"><strong>23</strong></div>
+                        <div class="col-6 py-1"><strong>Todo:</strong></div>
+                        <div class="col-6 py-1"><strong>32</strong></div>
+                        <div class="col-6 py-1"><strong>Bug:</strong></div>
+                        <div class="col-6 py-1"><strong>5</strong></div>
+                        <div class="col-6 py-1"><strong>Team size:</strong></div>
+                        <div class="col-6 py-1">
+                            <span class="avatar avatar-sm">+8</span>
+                        </div>
+                        <div class="col-6 py-1"><strong>Members:</strong></div>
+                        <div class="col-6 py-1"><strong>Lương, Tuyên</strong></div>
+                        <div class="col-6 py-1"><strong>Status</strong></div>
+                        <div class="col-6 py-1"><strong><span class="badge badge-success">Done</span></strong></div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+        <!-- MAIN -->
+
+
+
+        <!-- Main Col END -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <span>Coded by <a href="https://si-dev.com/ru">SI-Dev</a>, 2018</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+
+
+
+</body>
+
+</html>
